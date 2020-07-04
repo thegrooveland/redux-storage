@@ -13,7 +13,12 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "author": "Alejandro de Tovar <venespana159@gmail.com>",
-    "license": "MIT",
+    "homepage": "https://github.com/thegrooveland/redux-storage#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/thegrooveland/redux-storage#readme"
+    },
+    "license": "AGPL-3.0",
     "private": false,
     "scripts": {
         "build": "tsc",
