@@ -1,0 +1,35 @@
+{
+    "name": "@grooveland/redux-storage",
+    "version": "2020.7.4-a.1",
+    "description": "Middleware to record status changes (Redux) and store them in the browser storage",
+    "main": "index.js",
+    "author": "Alejandro de Tovar <venespana159@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "build": "tsc",
+        "dev": "onchange 'src/**/*.ts' -- yarn run build",
+        "test": "jest",
+        "test:watch": "jest --coverage --watchAll",
+        "view:coverage": "serve coverage/lcov-report",
+        "clean": "rm -rf coverage src/**/*.js src/**/*.map",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "check:types": "tsc --noEmit",
+        "check:lint": "eslint --ext .js,.jsx,.ts,.tsx src --color --fix"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.3",
+        "@types/node": "^14.0.14",
+        "@types/source-map-support": "^0.5.1",
+        "eslint": "^7.4.0",
+        "eslint-config-airbnb-typescript": "^8.0.2",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "jest": "^26.1.0",
+        "prettier": "^2.0.5",
+        "source-map-support": "^0.5.19",
+        "ts-jest": "^26.1.1",
+        "typescript": "^3.9.5"
+    }
+}
