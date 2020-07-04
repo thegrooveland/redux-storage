@@ -2,15 +2,15 @@
     "root": true,
     "parser": "@typescript-eslint/parser",
     "plugins": ["@typescript-eslint", "prettier", "import"],
-    "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
+    "extends": ["airbnb-typescript/base", "plugin:prettier/recommended"],
     "parserOptions": {
         "project": "./tsconfig.json"
     },
     "rules": {
+        "dot-notation": "off",
+        "keyword-spacing": "off",
         "prettier/prettier": "error",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-unused-vars": "off",
-        "@typescript-eslint/no-empty-function": "off",
+        "lines-between-class-members": "off",
         "import/prefer-default-export": "off",
         "import/extensions": [
             "error",
@@ -22,13 +22,13 @@
                 "tsx": "never"
             }
         ],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/indent": ["error", 4],
-        "dot-notation": "off",
         "@typescript-eslint/dot-notation": "off",
-        "keyword-spacing": "off",
         "@typescript-eslint/keyword-spacing": "off",
-        "lines-between-class-members": "off",
         "@typescript-eslint/lines-between-class-members": "off"
     }
 }
