@@ -1,9 +1,9 @@
 import { applyMiddleware } from 'redux';
-import { StorageSettings } from './types';
+import type { StorageSettings, StorageInitializer, StorageMiddleware, StatePreloader } from './types';
 
 export * from './types';
 
-export const storage = (settings: StorageSettings | null = null) => {
+export const storage: StorageInitializer = (settings = null) => {
     const defaultSettings: StorageSettings = {
         type: 'local',
         key: `${new Date().getTime()}`,
@@ -22,7 +22,7 @@ export const storage = (settings: StorageSettings | null = null) => {
             break;
     }
 
-    const middleware = applyMiddleware((store: any) => (next: any) => (action: any) => {
+    const middleware: StorageMiddleware = applyMiddleware<any, any>((store: any) => (next: any) => (action: any) => {
         const result = next(action);
         const state = store.getState();
 
@@ -32,7 +32,7 @@ export const storage = (settings: StorageSettings | null = null) => {
         return result;
     });
 
-    const preload = () => {
+    const preload: StatePreloader = () => {
         const loadedState = dataStorage.getItem(defaultSettings.key as string);
         let result = {};
         if (loadedState) {

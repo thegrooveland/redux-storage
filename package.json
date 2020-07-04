@@ -1,6 +1,6 @@
 {
     "name": "@grooveland/redux-storage",
-    "version": "2020.7.4-a.3",
+    "version": "2020.7.4",
     "description": "Middleware to record status changes (Redux) and store them in the browser storage",
     "keywords": [
         "redux",
@@ -10,8 +10,11 @@
         "local-storage",
         "persist"
     ],
-    "main": "./lib/main.js",
-    "types": "./lib/main.d.ts",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "./dist"
+    ],
     "author": "Alejandro de Tovar <venespana159@gmail.com>",
     "homepage": "https://github.com/thegrooveland/redux-storage#readme",
     "repository": {
