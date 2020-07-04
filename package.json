@@ -2,7 +2,16 @@
     "name": "@grooveland/redux-storage",
     "version": "2020.7.4-a.1",
     "description": "Middleware to record status changes (Redux) and store them in the browser storage",
-    "main": "index.js",
+    "keywords": [
+        "redux",
+        "middleware",
+        "react",
+        "storage",
+        "local-storage",
+        "persist"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "author": "Alejandro de Tovar <venespana159@gmail.com>",
     "license": "MIT",
     "private": false,
@@ -21,6 +30,7 @@
         "@types/jest": "^26.0.3",
         "@types/node": "^14.0.14",
         "@types/source-map-support": "^0.5.1",
+        "@typescript-eslint/eslint-plugin": "^3.5.0",
         "eslint": "^7.4.0",
         "eslint-config-airbnb-typescript": "^8.0.2",
         "eslint-config-prettier": "^6.11.0",
@@ -28,8 +38,12 @@
         "eslint-plugin-prettier": "^3.1.4",
         "jest": "^26.1.0",
         "prettier": "^2.0.5",
+        "redux": "^4.0.5",
         "source-map-support": "^0.5.19",
         "ts-jest": "^26.1.1",
         "typescript": "^3.9.5"
+    },
+    "peerDependencies": {
+        "redux": "4.x"
     }
 }
