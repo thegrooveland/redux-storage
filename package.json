@@ -1,6 +1,6 @@
 {
     "name": "@grooveland/redux-storage",
-    "version": "2020.7.4-a.1",
+    "version": "2020.7.4-a.3",
     "description": "Middleware to record status changes (Redux) and store them in the browser storage",
     "keywords": [
         "redux",
@@ -10,8 +10,8 @@
         "local-storage",
         "persist"
     ],
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "./lib/main.js",
+    "types": "./lib/main.d.ts",
     "author": "Alejandro de Tovar <venespana159@gmail.com>",
     "homepage": "https://github.com/thegrooveland/redux-storage#readme",
     "repository": {
@@ -29,7 +29,9 @@
         "clean": "rm -rf coverage src/**/*.js src/**/*.map",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "check:types": "tsc --noEmit",
-        "check:lint": "eslint --ext .js,.jsx,.ts,.tsx src --color --fix"
+        "check:lint": "eslint --ext .js,.jsx,.ts,.tsx src --color --fix",
+        "prepare": "yarn build",
+        "prepublishOnly": "yarn check:lint"
     },
     "devDependencies": {
         "@types/jest": "^26.0.3",
